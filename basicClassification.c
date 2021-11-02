@@ -1,10 +1,9 @@
-#include <stdio.h>
 #include "NumClass.h"
 
 int isPrime(int x) {
     int i = 2;
     while (i < x) {
-        if(x / i == 0) {
+        if(x % i == 0) {
             return 0;
         }
         i++;
@@ -19,7 +18,10 @@ int isStrong(int x) {
         sum += factorial(x%10);
         x /= 10;
     }
-    return num == sum;
+    if(num == sum) {
+        return 1;
+    }
+    return 0;
 }
 
 int factorial(int x) {
