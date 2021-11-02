@@ -18,15 +18,14 @@ int isStrong(int x) {
         sum += factorial(x%10);
         x /= 10;
     }
-    if(num == sum) {
-        return 1;
-    }
-    return 0;
+    return num == sum;
 }
 
 int factorial(int x) {
-    if(x == 1) {
-        return 1;
+    int sum = 1;
+    while(x > 0) {
+        sum *= x;
+        x--;
     }
-    return x * factorial(x-1);
+    return sum;
 }

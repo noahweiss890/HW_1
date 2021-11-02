@@ -5,5 +5,8 @@
     int isPalindrome(int);
     int isPrime(int);
     int isStrong(int);
-    int factorial(int x);
+    int factorial(int);
+    int length(int);
+    int isArmStrongHelper(int);
+    int isPalindromeHelper(int);
 #endif
