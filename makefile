@@ -15,7 +15,7 @@ recursived: libclassrec.so
 
 loopd: libclassloops.so
 
-mains: $(OBJECTS_MAIN) libclassrec.a
+mains: $(OBJECTS_MAIN)
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a
 
 maindloop: $(OBJECTS_MAIN)
