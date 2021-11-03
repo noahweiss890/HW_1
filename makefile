@@ -16,13 +16,13 @@ recursived: libclassrec.so
 loopd: libclassloops.so
 
 mains: $(OBJECTS_MAIN) libclassrec.a
-	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a
+	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 
 maindloop: $(OBJECTS_MAIN)
-	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so
+	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so -lm
 
 maindrec: $(OBJECTS_MAIN)
-	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so
+	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so -lm
 
 libclassloops.a: $(OBJECTS_LOOP)
 	$(AR) -rcs libclassloops.a $(OBJECTS_LOOP)
