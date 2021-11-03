@@ -5,7 +5,7 @@ OBJECTS_MAIN = main.o
 OBJECTS_LOOP = basicClassification.o advancedClassificationLoop.o
 OBJECTS_REC = basicClassification.o advancedClassificationRecursion.o
 
-all: recursives recursived loopd mains maindloop maindrec
+all: loops recursives recursived loopd mains maindloop maindrec
 
 loops: libclassloops.a
 
