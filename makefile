@@ -48,7 +48,7 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 
-.PHONY: clean all loops recursives recursived loopd mains maindloop maindrec
+.PHONY: clean all loops recursives recursived loopd
 
 clean:
 	rm -f mains maindloop maindrec *.a *.so *.o
