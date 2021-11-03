@@ -11,20 +11,15 @@ int length(int x) {
     return len;
 }
 
-int isArmstrongHelper(int x) {
-    int total = 0;
-    int len = length(x);
+int isArmstrongHelper(int x, int len) {
     if(x <= 9) {
-        total = pow(x, len);
-        return total;
+        return pow(x, len);
     }
-    total = pow((x%10), len) + isArmstrongHelper(x/10);
-    return total;
+    return pow((x%10), len) + isArmstrongHelper(x/10 ,len);
 }
 
 int isArmstrong(int x) {
-    int total = isArmstrongHelper(x);
-    if(total == x) {
+    if(isArmstrongHelper(x, length(x)) == x) {
         return 1;
     }
     return 0;
@@ -32,12 +27,12 @@ int isArmstrong(int x) {
 
 int isPalindromeHelper(int x) {
     int backwards = 0;
-    if(x == 0){
+    if(x == 0) {
         return backwards;
     }
     int r = x % 10;
     backwards = (backwards*10) + r;
-    isPalindrome(x/10);
+    isPalindromeHelper(x/10);
     return backwards;
 }
 
