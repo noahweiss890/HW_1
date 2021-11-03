@@ -25,19 +25,16 @@ int isArmstrong(int x) {
     return 0;
 }
 
-int isPalindromeHelper(int x) {
-    int backwards = 0;
+int isPalindromeHelper(int x, int backwards) {
     if(x == 0) {
         return backwards;
     }
-    int r = x % 10;
-    backwards = (backwards*10) + r;
-    isPalindromeHelper(x/10);
-    return backwards;
+    backwards = (backwards*10) + (x%10);
+    return isPalindromeHelper(x/10, backwards);
 }
 
-int isPalindrome(int x){
-    if(isPalindromeHelper(x) == x) {
+int isPalindrome(int x) {
+    if(isPalindromeHelper(x,0) == x) {
         return 1;
     }
     return 0;

@@ -7,6 +7,6 @@
     int isStrong(int);
     int factorial(int);
     int length(int);
-    int isArmStrongHelper(int);
-    int isPalindromeHelper(int);
+    int isArmStrongHelper(int,int);
+    int isPalindromeHelper(int,int);
 #endif
